@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular-blog-demo
 =================
 
@@ -9,3 +10,7 @@ Mini blog app to demonstrate basic AngularJS. Uses node+express.
 2. git clone https://github.com/paislee/angular-blog-demo.git
 3. run `npm install` from source root
 4. run `node server.js` to start the server on localhost:8080
+=======
+# Cookbook
+Simple cookbook for angularjs practice.
+>>>>>>> 254accd8a4ac08f9cf1ecec0dc9e6aa33ca1ba34
