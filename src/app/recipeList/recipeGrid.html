@@ -1,0 +1,28 @@
+<h3 class=""><span ng-bind="recipes.length"></span> recipes</h3>
+
+<p><label for="">filter</label><input type="text" autofocus="true" ng-model="filterRecipe"></p>
+
+<table class="table table-hover table-striped">
+	<thead>
+		<tr class="tableHeader">
+			<th class=""></th> 
+			<th class="">Author</th> 
+			<th class="">Title</th> 
+			<th class="">Servings</th> 
+			<th class="">Cooktime</th> 
+			<th class="">Category</th> 
+			<th class="">Date</th> 
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="recipe in recipes | filter:filterRecipe | orderBy:'title'" class="">			
+			<td>{{ recipe.recipeId }}</td>
+			<td>{{ recipe.author }}</td>
+			<td><a href="#/recipe/{{recipe.recipeId}}">{{ recipe.title }}</a></td>
+			<td>{{ recipe.servings }}</td>
+			<td>{{ recipe.cooktime }}</td>
+			<td>{{ recipe.category }}</td>
+			<td>{{ recipe.date | date }}</td>
+		</tr>
+	</tbody>
+</table>

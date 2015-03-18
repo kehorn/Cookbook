@@ -1,0 +1,17 @@
+{
+  "name": "cookbook",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Kevin Horning <kevin.horning@gmail.com>",
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "express": "^4.7.2",
+    "method-override": "^2.1.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.2.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-ie-launcher": "^0.1.5",
+    "karma-jasmine": "^0.3.5"
+  }
+}

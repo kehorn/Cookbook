@@ -1,0 +1,11 @@
+.table-hover tbody tr:hover td {
+	background-color: rgb(210, 210, 253);
+}    
+
+.compactForm .form-group {
+	margin-bottom: 0;
+}
+
+.compactForm ul, .compactForm ol {
+	margin-left: -20px;
+}

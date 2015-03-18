@@ -1,0 +1,85 @@
+<div ng-controller="RecipeViewController" class="">
+	<div class="container">
+	
+		<div ng-include="'common/recipeListHeader.html'"></div>
+		
+
+		<form class="form-horizontal compactForm">
+		
+			<div class="row">
+				<div class="col-xs-6">
+					<h2>{{recipe.title}} <small>by {{recipe.author}}</small></h2>
+				</div>
+				<div class="col-xs-6 text-right">
+					<p class="text-right">Added on: {{recipe.date | date}}</p>
+				</div>
+			</div>
+				
+			<div class="text-right"><button type="button" class="btn btn-primary" ng-show="!editMode" ng-click="toggleEdit()">Edit</button></div>
+			<div class="text-right">
+				<button type="button" class="btn  btn-default" ng-show="editMode" ng-click="toggleEdit()">Cancel</button>
+				<button type="button" class="btn btn-primary" ng-show="editMode" ng-click="save()">Save</button>
+			</div>
+			
+				
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Servings:</label>
+				<div class="col-xs-2 form-control-static">
+					<span class="" ng-show="!editMode">{{recipe.servings}}</span>
+					<input type="text" class="form-control" ng-model="recipe.servings" ng-show="editMode"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Cook Time:</label>
+				<div class="col-xs-2 form-control-static">
+					<span class="" ng-show="!editMode">{{recipe.cooktime}}</span>
+					<input type="text" class="form-control" ng-model="recipe.cooktime" ng-show="editMode"/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Category:</label>
+				<div class="col-xs-2 form-control-static">
+					<span class="" ng-show="!editMode">{{recipe.categoryName}}</span>
+					<select type="text" class="form-control" ng-model="recipe.category"  ng-options="category.value as category.name for category in categories" ng-show="editMode">						
+					</select>
+				</div>
+			</div>
+							
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Keywords:</label>
+				<div class="col-xs-4 form-control-static">
+					<span class="" ng-show="!editMode">{{recipe.keywords}}</span>
+					<input type="text" class="form-control" ng-model="recipe.keywords" ng-show="editMode"/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Ingredients:</label>
+				<div class="col-xs-10 form-control-static">
+					<ul ng-show="!editMode"><li ng-repeat="line in (recipe.ingredients | newlines)">{{line}}</li></ul>
+					<textarea class="form-control" rows="3" ng-model="recipe.ingredients" ng-show="editMode"></textarea>
+				</div>
+			</div>				
+
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Instructions:</label>
+				<div class="col-xs-10 form-control-static">
+					<ol ng-show="!editMode"><li ng-repeat="line in (recipe.instructions | newlines)">{{line}}</li></ol>
+					<textarea class="form-control" rows="3" ng-model="recipe.instructions" ng-show="editMode"></textarea>
+				</div>
+			</div>		
+			
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Notes:</label>
+				<div class="col-xs-10 form-control-static">
+					<span class="" ng-show="!editMode">{{recipe.notes}}</span>
+					<textarea class="form-control" rows="3" ng-model="recipe.notes" ng-show="editMode"></textarea>
+				</div>
+			</div>		
+
+		</form>		
+		
+	</div>
+</div>
