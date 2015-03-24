@@ -1,11 +1,14 @@
-<div ng-controller="RecipeViewController" class="">
+<div class="">
 	<div class="container">
 	
-		<div ng-include="'common/recipeListHeader.html'"></div>
+		<div ng-include="'common/recipeListHeader.html'"></div>	
 		
+m<div data-i18n="_Greeting_"></div>n
+x<div ng-bind="'_Greeting_' | i18n"></div>y
+a{{'_Greeting_' | i18n}}b	
 
 		<form class="form-horizontal compactForm">
-		
+	
 			<div class="row">
 				<div class="col-xs-6">
 					<h2>{{recipe.title}} <small>by {{recipe.author}}</small></h2>

@@ -2,7 +2,7 @@
 	"use strict"; //  Safe wrapper for use strict.
 
 	// declare our app module and its dependencies
-	var cb = angular.module('cookbookApp', ['ngRoute', 'LineSplitterCustomFilterModule']);
+	var cb = angular.module('cookbookApp', ['ngRoute', 'LineSplitterCustomFilterModule', 'localization']);
 
 	// configure the app
 	cb.config(['$routeProvider', function($routeProvider) {
@@ -12,15 +12,15 @@
 			controller: 'RecipeListController'
 		})
 			.when('/recipe/:recipeId', {
-			controller: 'RecipeViewController',
-			templateUrl: '/app/recipe/recipe.html'
+			templateUrl: '/app/recipe/recipe.html',
+			controller: 'RecipeViewController'			
 		})
 			.otherwise({
 			redirectTo: '/'
 		});
 
 	}]);
-
+	
 
 	// Controller for the recipes list page.
 	cb.controller('HeadingController', ['$scope', 'CookbookInfoService', function($scope, CookbookInfoService) {
@@ -63,7 +63,7 @@
 
 		$scope.toggleEdit = function() {
 			$scope.editMode = !$scope.editMode;
-		}
+		};
 
 	}]);
 

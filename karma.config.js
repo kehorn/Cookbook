@@ -18,6 +18,7 @@ module.exports = function(config) {
 	  'require.js',	  
 	  'src/vendor/angular/angular.min.js',	
 	  'src/vendor/angular/angular-route.js',	
+	  'src/vendor/localize/localize.js',	
 
       'angular-mocks.js',	
 	  'src/routes.js',	  
@@ -36,6 +37,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
     },
+
 
 
     // test results reporter to use
