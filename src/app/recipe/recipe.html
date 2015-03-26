@@ -3,9 +3,9 @@
 	
 		<div ng-include="'common/recipeListHeader.html'"></div>	
 		
-m<div data-i18n="_Greeting_"></div>n
+<!--m<div data-i18n="_Greeting_"></div>n
 x<div ng-bind="'_Greeting_' | i18n"></div>y
-a{{'_Greeting_' | i18n}}b	
+<div>a{{'_Greeting_' | i18n}}b</div>-->
 
 		<form class="form-horizontal compactForm">
 	
@@ -14,7 +14,7 @@ a{{'_Greeting_' | i18n}}b
 					<h2>{{recipe.title}} <small>by {{recipe.author}}</small></h2>
 				</div>
 				<div class="col-xs-6 text-right">
-					<p class="text-right">Added on: {{recipe.date | date}}</p>
+					<p class="text-right">{{'_AddedOn_' | i18n}}: {{recipe.date | date}}</p>
 				</div>
 			</div>
 				

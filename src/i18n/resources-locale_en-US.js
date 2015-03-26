@@ -5,8 +5,8 @@
         "description":"Home page greeting text"
     },
     {
-        "key":"_HomeTitle_",
-        "value":"Resource Localization Service",
-        "description":"Home page title text"
+        "key":"_AddedOn_",
+        "value":"Added on",
+        "description":""
     }
 ]
