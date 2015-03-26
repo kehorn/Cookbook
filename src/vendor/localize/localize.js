@@ -117,8 +117,9 @@ angular.module('localization', [])
                                 return element.key === value;
                             }
                         );
-                        // set the result
-                        result = entry[value] ? entry[value] : value;
+                        // #krh bug? This appears to fix it.
+                        //result = entry[value] ? entry[value] : value;
+                        result = entry[0] && entry[0].value ? entry[0].value : value;
                     }
                     // return the value to the call
                     return result;
